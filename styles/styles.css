@@ -1,50 +1,50 @@
 .header {
   width: 100%;
   padding: 20px 50px 20px 50px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
   color: #ffffff;
   font-size: 20px;
   background-color: black;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); 
 }
 .header__links-list {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
   gap: 30px;
-  list-style: none;
   text-decoration: none;
+  list-style: none;
 }
 .header__menu-link {
   text-decoration: none;
 }
 .main {
+  min-height: 100%;
   padding: 30px 100px 20px 100px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
   background-image: url(../image/bacground.webp);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  min-height: 100%;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); 
 }
 .about-content {
   display: grid;
-  grid-template-columns: 1fr 300px; 
+  grid-template-columns: 1fr 300px;
+  align-items: center;
   gap: 200px;
-  align-items: center; 
 }
 
 .text-block {
+  display: grid;
+  gap: 20px;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   color: #fff;
-  display: grid; 
-  gap: 20px; 
-  background-color: rgba(0, 0, 0, 0.5); 
-  padding: 20px; 
-  border-radius: 10px; 
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+  background-color: rgba(0, 0, 0, 0.5);
 }
 .about__center {
-  text-align: center;
   padding: 20px 0 30px 0;
+  text-align: center;
 }
 .about__top {
   padding-bottom: 30px;
@@ -52,30 +52,30 @@
 
 .image-block {
   display: grid;
-  place-items: center; 
+  place-items: center;
 }
 
 .about__image {
-  max-width: 100%;
-  max-height: 100%;
-  border: 2px solid rgba(0, 0, 0, 0.5); 
-  padding: 5px; 
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); 
-  border-radius: 50%; 
   width: 300px;
+  max-width: 100%;
   height: 400px;
-  background-color: rgba(0, 0, 0, 0.5); 
+  max-height: 100%;
+  border: 2px solid rgba(0, 0, 0, 0.5);
+  border-radius: 50%;
+  padding: 5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0.5);
 }
 
 .bet-button {
   margin-top: 100px;
-  padding: 15px 30px;
-  background-color: #000000;
-  color: #fff;
   border: none;
   border-radius: 5px;
-  cursor: pointer;
+  padding: 15px 30px;
+  color: #fff;
+  background-color: #000000;
   transition: background-color 0.3s;
+  cursor: pointer;
 }
 
 .bet-button:hover {
@@ -86,30 +86,30 @@
   position: fixed;
   top: 0;
   left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0,0,0,0.7);
   display: flex;
   justify-content: center;
   align-items: center;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
 }
 
 .modal-content {
-  background: #fff;
-  padding: 20px;
-  border-radius: 8px;
-  width: 300px;
   display: flex;
   flex-direction: column;
   align-items: center;
+  width: 300px;
+  border-radius: 8px;
+  padding: 20px;
+  background: #fff;
 }
 
 .modal-content input {
   width: 100%;
-  padding: 10px;
   margin: 10px 0;
   border: 1px solid #ccc;
   border-radius: 4px;
+  padding: 10px;
 }
 
 .button-container {
@@ -120,18 +120,17 @@
 }
 
 .modal-content button {
-  padding: 10px 20px;
-  background: #000;
-  color: #fff;
   border: none;
   border-radius: 4px;
+  padding: 10px 20px;
+  color: #fff;
+  background: #000;
   cursor: pointer;
 }
 
 .modal-content button:hover {
   background: #ff24af;
 }
-
 
 .specialization {
   display: flex;
@@ -176,11 +175,11 @@
   justify-content: space-between;
   width: 334px;
   min-height: 596px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  background-color: rgba(0, 0, 0, 0.5);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  background-color: rgba(0, 0, 0, 0.5);
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 .card__title {
   padding: 51px 40px 0 40px;
@@ -189,9 +188,9 @@
   font-size: 22px;
   line-height: 1.2;
   text-decoration: underline;
+  text-decoration: none;
   text-decoration-skip-ink: none;
   text-transform: uppercase;
-  text-decoration: none
 }
 
 .card__text {
@@ -202,9 +201,9 @@
   line-height: 1.2;
 }
 .swiper-container {
+  position: relative;
   min-width: 100%;
   min-height: 100%;
-  position: relative;
 }
 
 .swiper-wrapper {
@@ -229,181 +228,66 @@
   height: 50%;
 }
 .footer {
-    background-color: #111;
-    padding: 30px 0;
-    color: #fff;
+  padding: 30px 0;
+  color: #fff;
+  background-color: #111;
 }
 
 .footer__wrapper {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 15px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
 }
 
 .footer__contacts {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 }
 
 .footer__phone,
 .footer__email {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    font-size: 16px;
-    color: #fff;
-    transition: color 0.3s;
-    
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #fff;
+  font-size: 16px;
+  transition: color 0.3s;
 }
 
 .footer__phone:hover,
 .footer__email:hover {
-    color: #ff6b6b;
+  color: #ff6b6b;
 }
 
 .footer__social {
-    display: flex;
-    gap: 20px;
-    text-decoration: none
+  display: flex;
+  gap: 20px;
+  text-decoration: none;
 }
 
 .social-link {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    color: #fff;
-    font-size: 20px;
-    transition: all 0.3s;
-    text-decoration: none
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  color: #fff;
+  font-size: 20px;
+  text-decoration: none;
+  transition: all 0.3s;
 }
 
 .social-link:hover {
-    background-color: #ff6b6b;
-    transform: scale(1.1);
+  background-color: #ff6b6b;
+  transform: scale(1.1);
 }
 
-/* Иконки */
 .fas,
 .fab {
-    font-size: 20px;
-}
-
-/* Базовые настройки для мобильных устройств */
-@media (max-width: 768px) {
-  .header {
-    padding: 15px 15px; /* Уменьшаем отступы */
-    font-size: 18px;
-  }
-
-  .header__links-list {
-    flex-direction: column; /* Делаем меню вертикальным */
-    gap: 15px;
-  }
-
-  .main {
-    padding: 20px 15px; /* Уменьшаем отступы */
-  }
-
-  .about-content {
-    grid-template-columns: 1fr; /* Один столбец */
-    gap: 20px;
-  }
-
-  .text-block {
-    padding: 15px;
-  }
-
-  .about__image {
-    width: 100%; /* Изображение на всю ширину */
-    height: auto;
-    max-width: 100%;
-  }
-
-  .bet-button {
-    margin-top: 30px;
-    padding: 12px 20px;
-  }
-}
-
-/* Оптимизация для маленьких экранов */
-@media (max-width: 480px) {
-  .header {
-    padding: 10px 10px;
-  }
-
-  .specialization {
-    padding: 20px 10px;
-  }
-
-  .card {
-    width: 100%; /* Карточки на всю ширину */
-    min-height: auto;
-    padding: 15px;
-  }
-
-  .card__title {
-    padding: 20px 15px 0 15px;
-    font-size: 18px;
-  }
-
-  .card__text {
-    padding: 0 15px 15px 15px;
-    font-size: 16px;
-  }
-
-  .modal-content {
-    width: 90%; /* На маленьких экранах уменьшаем ширину */
-    max-width: 300px;
-  }
-
-  .specialization__card-list {
-    flex-direction: column;
-    gap: 15px;
-  }
-
-  .footer__wrapper {
-    padding: 0 10px;
-    flex-direction: column;
-    gap: 20px;
-  }
-}
-
-/* Оптимизация модального окна */
-.modal-content {
-  width: 90%;
-  padding: 15px;
-}
-
-.modal-content input {
-  font-size: 16px;
-}
-
-/* Оптимизация карточек специализации */
-.specialization__card-list-item {
-  margin-bottom: 20px;
-}
-
-/* Оптимизация футера */
-.footer__contacts,
-.footer__social {
-  width: 100%;
-}
-
-.footer__phone,
-.footer__email {
-  font-size: 14px;
-}
-
-.social-link {
-  width: 30px;
-  height: 30px;
-  font-size: 16px;
+  font-size: 20px;
 }
