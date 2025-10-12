@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Персональный тренер - Ульяна Курноскина</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <link rel="stylesheet" href="./fonts/fonts.css" />
+    <link rel="stylesheet" href="./styles/global.css" />
+    <link rel="stylesheet" href="./styles/styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css"
+    />
+  </head>
+  <body>
+    <header class="header">
+      <nav class="header__menu">
+        <ul class="header__links-list">
+          <li class="header__links-list-item">
+            <a class="header__menu-link" href="#specialization">специализация</a>
+          </li>
+          <li class="header__links-list-item">
+            <a class="header__menu-link" href="#wrapper">результаты клиентов</a>
+          </li>
+          <li class="header__links-list-item">
+            <a class="header__menu-link" href="#contacts">контакты</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <section class="main overlay">
+        <div class="about-content">
+          <div class="text-block">
+            <h1 class="about__center">Ульяна Курноскина</h1>
+            <p class="about__top">
+              Привет! Меня зовут Ульяна, и я профессиональный фитнес-тренер,
+              специализирующийся на похудении, поддержании формы и наборе
+              мышечной массы. За последнее время я помогла многим девушкам
+              достичь их фитнес-целей и улучшить качество жизни.
+            </p>
+            <p class="about__bottom">
+              Работая со мной, вы получите максимальный комфорт и ежедневную
+              поддержку. Работаю с девушками в любом возрасте, а также с
+              девушками с РПП.
+            </p>
+            <button class="bet-button" id="open-form-btn">
+              Записаться на занятие
+            </button>
+            <div class="modal" style="display: none">
+              <!-- Форма -->
+              <div class="modal-content">
+                <h3>Запись на занятие</h3>
+                <form id="contact-form">
+                  <input
+                    type="text"
+                    name="name"
+                    placeholder="Ваше имя"
+                    required
+                  />
+                  <input
+                    type="tel"
+                    name="phone"
+                    placeholder="Номер телефона"
+                    required
+                  />
+
+                  <div class="button-container">
+                    <button type="submit">Отправить</button>
+                    <button class="close-btn">Закрыть</button>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+          <div class="image-block">
+            <img
+              class="about__image"
+              alt="Мое фото"
+              src="./image/rkfqvqtdnk5hdtvtoqs2yvkysfs77m8j-Photoroom.png"
+            />
+          </div>
+        </div>
+      </section>
+      <section class="specialization" id="specialization"> 
+        <h2 class="specialization__heading">Специализация</h2>
+        <div class="specialization__card-list">
+          <div class="specialization__card-list-item">
+            <div class="card card_type_mass">
+              <article class="card">
+                <h3 class="card__title">Набор мышечной массы</h3>
+                <p class="card__text">
+                  Набор мышечной массы — это не просто про красивую фигуру.
+                  Сильные мышцы помогают оставаться здоровым и активным.
+                  Мышечная масса улучшает обмен веществ, помогает сжигать больше
+                  калорий даже в покое. Крепкие мышцы защищают суставы и связки
+                  от травм, поддерживают правильную осанку.
+                </p>
+              </article>
+            </div>
+          </div>
+          <div class="specialization__card-list-item">
+            <div class="card card_type_back">
+              <article class="card">
+                <h3 class="card__title">Исправление осанки</h3>
+                <p class="card__text">
+                  Правильная осанка — основа здоровья. Сутулость вызывает боли в
+                  спине, проблемы с дыханием и пищеварением. При правильной
+                  осанке лучше работают все органы, улучшается кровообращение.
+                </p>
+              </article>
+            </div>
+          </div>
+          <div class="specialization__card-list-item">
+            <div class="card card_type_general">
+              <article class="card">
+                <h3 class="card__title">Общая физическая подготовка</h3>
+                <p class="card__text">
+                  Фундамент здоровья и хорошего самочувствия. Регулярные занятия
+                  ОФП развивают силу, выносливость, гибкость и координацию
+                  движений.Базовые упражнения (бег, прыжки, отжимания) укрепляют
+                  мышцы, улучшают работу сердца и помогают похудеть. Заниматься
+                  можно в любом возрасте, даже 30 минут в день дадут результат.
+                </p>
+              </article>
+            </div>
+          </div>
+        </div>
+      </section>
+      <div class="wrapper" id="wrapper">
+        <h1 class="title-wrapper">Результаты моих клиенток</h1>
+        <div class="image-slider swiper-container">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <div class="image-slider__image">
+                <img src="./image/diana.jpg" alt="Клиентка Диана" />
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="image-slider__image">
+                <img src="./image/bacground.webp" alt="Kartinka" />
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="image-slider__image">
+                <img src="./image/bacground.webp" alt="Kartinka" />
+              </div>
+            </div>
+          </div>
+          <!-- Кнопки навигации -->
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-button-next"></div>
+          <div class="swiper-pagination"></div>
+        </div>
+      </div>
+    </main>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
+    <script src="./script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <footer class="footer">
+      <div class="footer__wrapper">
+        <div class="footer__contacts" id="contacts">
+          <div class="footer__phone">
+            <a href="tel:+79110235371">
+              <i class="fas fa-phone"></i> +7 (911) 023 53 71
+            </a>
+          </div>
+          <div class="footer__email">
+            <a href="mailto:ulianakrna@mail.ru">
+              <i class="fas fa-envelope"></i> ulianakrna@mail.ru
+            </a>
+          </div>
+        </div>
+
+        <div class="footer__social">
+          <a href="https://t.me/milostyababy" class="social-link">
+            <i class="fab fa-telegram"></i>
+          </a>
+          <a href="https://wa.me/79110235371" class="social-link">
+            <i class="fab fa-whatsapp"></i>
+          </a>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
