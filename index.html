@@ -1,6 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
+ <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Персональный тренер - Ульяна Курноскина</title>
@@ -26,6 +24,15 @@
             >
           </li>
           <li class="header__links-list-item">
+            <a class="header__menu-link" href="#benefits">преимущества</a>
+          </li>
+          <li class="header__links-list-item">
+            <a class="header__menu-link" href="#programs">форматы</a>
+          </li>
+          <li class="header__links-list-item">
+            <a class="header__menu-link" href="#process">как работаем</a>
+          </li>
+          <li class="header__links-list-item">
             <a class="header__menu-link" href="#wrapper">результаты клиентов</a>
           </li>
           <li class="header__links-list-item">
@@ -36,129 +43,282 @@
     </header>
     <main>
       <section class="main overlay">
-        <div class="about-content">
-          <div class="text-block">
-            <h1 class="about__center">Ульяна Курноскина</h1>
-            <p class="about__top">
-              Привет! Меня зовут Ульяна, и я профессиональный фитнес-тренер,
-              специализирующийся на похудении, поддержании формы и наборе
-              мышечной массы. За последнее время я помогла многим девушкам
-              достичь их фитнес-целей и улучшить качество жизни.
-            </p>
-            <p class="about__bottom">
-              Работая со мной, вы получите максимальный комфорт и ежедневную
-              поддержку. Работаю с девушками в любом возрасте, а также с
-              девушками с РПП.
-            </p>
-            <button class="bet-button" id="open-form-btn">
-              Записаться на занятие
-            </button>
-            <div class="modal" style="display: none">
-              <!-- Форма -->
-              <div class="modal-content">
-                <h3>Запись на занятие</h3>
-                <form id="contact-form">
-                  <input
-                    type="text"
-                    name="name"
-                    placeholder="Ваше имя"
-                    required
-                  />
-                  <input
-                    type="tel"
-                    name="phone"
-                    placeholder="Номер телефона"
-                    required
-                  />
-
-                  <div class="button-container">
-                    <button type="submit">Отправить</button>
-                    <button class="close-btn">Закрыть</button>
-                  </div>
-                </form>
+        <div class="container">
+          <div class="about-content">
+            <div class="text-block">
+              <span class="about__subtitle">персональный тренер онлайн</span>
+              <h1 class="about__center">Ульяна Курноскина</h1>
+              <p class="about__top">
+                Привет! Я профессиональный фитнес-тренер, специализирующийся на
+                похудении, поддержании формы и наборе мышечной массы. За
+                последнее время помогла десяткам девушек достичь фитнес-целей и
+                улучшить качество жизни.
+              </p>
+              <p class="about__bottom">
+                Работая со мной, вы получите комфорт, чёткий план и ежедневную
+                поддержку. Веду девушек любого возраста, включая тех, кто
+                сталкивался с РПП.
+              </p>
+              <ul class="about__highlights">
+                <li>Разумные тренировки без перегруза</li>
+                <li>Питание без жёстких диет и срывов</li>
+                <li>Поддержка и корректировка каждую неделю</li>
+              </ul>
+              <div class="about__actions">
+                <button class="bet-button" id="open-form-btn">
+                  Записаться на занятие
+                </button>
+                <span class="about__note"
+                  >Первичная консультация — бесплатно</span
+                >
+              </div>
+              <div class="about__stats">
+                <div class="stat-card">
+                  <div class="stat-card__value">80+</div>
+                  <div class="stat-card__label">клиенток</div>
+                </div>
+                <div class="stat-card">
+                  <div class="stat-card__value">4 года</div>
+                  <div class="stat-card__label">практики</div>
+                </div>
+                <div class="stat-card">
+                  <div class="stat-card__value">24/7</div>
+                  <div class="stat-card__label">поддержка</div>
+                </div>
               </div>
             </div>
-          </div>
-          <div class="image-block">
-            <img
-              class="about__image"
-              alt="Мое фото"
-              src="./image/rkfqvqtdnk5hdtvtoqs2yvkysfs77m8j-Photoroom.png"
-            />
+            <div class="image-block">
+              <img
+                class="about__image"
+                alt="Мое фото"
+                src="./image/rkfqvqtdnk5hdtvtoqs2yvkysfs77m8j-Photoroom.png"
+              />
+            </div>
           </div>
         </div>
       </section>
+      <div class="modal modal--hidden" id="signup-modal" role="dialog" aria-modal="true">
+        <div class="modal-content" role="document">
+          <div class="modal-header">
+            <h3>Запись на занятие</h3>
+            <button class="close-btn" type="button" aria-label="Закрыть форму">
+              ×
+            </button>
+          </div>
+          <form id="contact-form">
+            <input type="text" name="name" placeholder="Ваше имя" required />
+            <input
+              type="tel"
+              name="phone"
+              placeholder="Номер телефона"
+              required
+            />
+
+            <div class="button-container">
+              <button type="submit">Отправить</button>
+            </div>
+          </form>
+        </div>
+      </div>
       <section class="specialization" id="specialization">
-        <h2 class="specialization__heading">Специализация</h2>
-        <div class="specialization__card-list">
-          <div class="specialization__card-list-item">
-            <div class="card card_type_mass">
-              <article class="card">
-                <h3 class="card__title">Набор мышечной массы</h3>
-                <p class="card__text">
-                  Набор мышечной массы — это не просто про красивую фигуру.
-                  Сильные мышцы помогают оставаться здоровым и активным.
-                  Мышечная масса улучшает обмен веществ, помогает сжигать больше
-                  калорий даже в покое. Крепкие мышцы защищают суставы и связки
-                  от травм, поддерживают правильную осанку.
-                </p>
-              </article>
+        <div class="container">
+          <h2 class="specialization__heading">Специализация</h2>
+          <div class="specialization__card-list">
+            <div class="specialization__card-list-item">
+              <div class="card card_type_mass">
+                <article class="card">
+                  <h3 class="card__title">Набор мышечной массы</h3>
+                  <p class="card__text">
+                    Набор мышечной массы — это не просто про красивую фигуру.
+                    Сильные мышцы помогают оставаться здоровым и активным.
+                    Мышечная масса улучшает обмен веществ, помогает сжигать
+                    больше калорий даже в покое. Крепкие мышцы защищают суставы
+                    и связки от травм, поддерживают правильную осанку.
+                  </p>
+                </article>
+              </div>
+            </div>
+            <div class="specialization__card-list-item">
+              <div class="card card_type_back">
+                <article class="card">
+                  <h3 class="card__title">Исправление осанки</h3>
+                  <p class="card__text">
+                    Правильная осанка — основа здоровья. Сутулость вызывает боли
+                    в спине, проблемы с дыханием и пищеварением. При правильной
+                    осанке лучше работают все органы, улучшается кровообращение.
+                  </p>
+                </article>
+              </div>
+            </div>
+            <div class="specialization__card-list-item">
+              <div class="card card_type_general">
+                <article class="card">
+                  <h3 class="card__title">Общая физическая подготовка</h3>
+                  <p class="card__text">
+                    Фундамент здоровья и хорошего самочувствия. Регулярные
+                    занятия ОФП развивают силу, выносливость, гибкость и
+                    координацию движений. Базовые упражнения укрепляют мышцы,
+                    улучшают работу сердца и помогают похудеть.
+                  </p>
+                </article>
+              </div>
             </div>
           </div>
-          <div class="specialization__card-list-item">
-            <div class="card card_type_back">
-              <article class="card">
-                <h3 class="card__title">Исправление осанки</h3>
-                <p class="card__text">
-                  Правильная осанка — основа здоровья. Сутулость вызывает боли в
-                  спине, проблемы с дыханием и пищеварением. При правильной
-                  осанке лучше работают все органы, улучшается кровообращение.
-                </p>
-              </article>
-            </div>
+        </div>
+      </section>
+      <section class="benefits" id="benefits">
+        <div class="container">
+          <h2 class="benefits__heading">Что вы получите</h2>
+          <div class="benefits__grid">
+            <article class="benefit-card">
+              <span class="benefit-card__icon"
+                ><i class="fas fa-dumbbell"></i
+              ></span>
+              <h3 class="benefit-card__title">Персональный план</h3>
+              <p class="benefit-card__text">
+                Индивидуальная программа тренировок и питания под ваш ритм
+                жизни, цели и уровень подготовки.
+              </p>
+            </article>
+            <article class="benefit-card">
+              <span class="benefit-card__icon"
+                ><i class="fas fa-heart"></i
+              ></span>
+              <h3 class="benefit-card__title">Поддержка 24/7</h3>
+              <p class="benefit-card__text">
+                Всегда на связи: корректировка нагрузки, ответы на вопросы и
+                мотивация.
+              </p>
+            </article>
+            <article class="benefit-card">
+              <span class="benefit-card__icon"
+                ><i class="fas fa-chart-line"></i
+              ></span>
+              <h3 class="benefit-card__title">Прозрачный прогресс</h3>
+              <p class="benefit-card__text">
+                Отслеживаем измерения, фото и результаты, чтобы видеть рост
+                каждую неделю.
+              </p>
+            </article>
+            <article class="benefit-card">
+              <span class="benefit-card__icon"
+                ><i class="fas fa-seedling"></i
+              ></span>
+              <h3 class="benefit-card__title">Здоровые привычки</h3>
+              <p class="benefit-card__text">
+                Формируем режим без жёстких ограничений и с заботой о здоровье.
+              </p>
+            </article>
           </div>
-          <div class="specialization__card-list-item">
-            <div class="card card_type_general">
-              <article class="card">
-                <h3 class="card__title">Общая физическая подготовка</h3>
-                <p class="card__text">
-                  Фундамент здоровья и хорошего самочувствия. Регулярные занятия
-                  ОФП развивают силу, выносливость, гибкость и координацию
-                  движений.Базовые упражнения (бег, прыжки, отжимания) укрепляют
-                  мышцы, улучшают работу сердца и помогают похудеть. Заниматься
-                  можно в любом возрасте, даже 30 минут в день дадут результат.
-                </p>
-              </article>
-            </div>
+        </div>
+      </section>
+      <section class="programs" id="programs">
+        <div class="container">
+          <h2 class="programs__heading">Форматы работы</h2>
+          <div class="programs__grid">
+            <article class="program-card">
+              <h3 class="program-card__title">Онлайн-сопровождение</h3>
+              <p class="program-card__text">
+                Еженедельные отчёты, корректировки плана и поддержка в мессенджере.
+              </p>
+              <span class="program-card__note">Подходит для занятых девушек</span>
+            </article>
+            <article class="program-card">
+              <h3 class="program-card__title">Персональные тренировки</h3>
+              <p class="program-card__text">
+                Тренировки 1 на 1 с техникой под контролем и быстрым прогрессом.
+              </p>
+              <span class="program-card__note">Онлайн или офлайн</span>
+            </article>
+            <article class="program-card">
+              <h3 class="program-card__title">Разовый разбор</h3>
+              <p class="program-card__text">
+                Анализ питания, тренировок и рекомендаций, чтобы двигаться дальше.
+              </p>
+              <span class="program-card__note">Идеально для старта</span>
+            </article>
+          </div>
+        </div>
+      </section>
+      <section class="process" id="process">
+        <div class="container">
+          <h2 class="process__heading">Как проходит работа</h2>
+          <div class="process__steps">
+            <article class="step-card">
+              <div class="step-card__number">01</div>
+              <h3 class="step-card__title">Диагностика</h3>
+              <p class="step-card__text">
+                Созваниваемся, обсуждаем ваши цели, образ жизни и текущие
+                показатели.
+              </p>
+            </article>
+            <article class="step-card">
+              <div class="step-card__number">02</div>
+              <h3 class="step-card__title">Стратегия</h3>
+              <p class="step-card__text">
+                Формируем план тренировок и питания с понятными шагами и
+                контрольными точками.
+              </p>
+            </article>
+            <article class="step-card">
+              <div class="step-card__number">03</div>
+              <h3 class="step-card__title">Сопровождение</h3>
+              <p class="step-card__text">
+                Каждую неделю корректируем план и фиксируем прогресс, чтобы вы
+                шли к результату уверенно.
+              </p>
+            </article>
           </div>
         </div>
       </section>
       <div class="wrapper" id="wrapper">
-        <h1 class="title-wrapper">Результаты моих клиенток</h1>
-        <div class="image-slider swiper-container">
-          <div class="swiper-wrapper">
-            <div class="swiper-slide">
-              <div class="image-slider__image">
-                <img src="./image/diana.jpg" alt="Клиентка Диана" />
+        
+        <div class="container">
+          <h1 class="title-wrapper">Результаты моих клиенток</h1>
+          <div class="image-slider swiper-container">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <div class="image-slider__image">
+                  <img src="./image/diana.jpg" alt="Клиентка Диана" />
+                </div>
               </div>
-            </div>
-            <div class="swiper-slide">
-              <div class="image-slider__image">
-                <img src="./image/bacground.webp" alt="Kartinka" />
+  
+              <div class="swiper-slide">
+                <div class="image-slider__image">
+                  <img src="./image/bacground.webp" alt="Результат клиентки" />
+                </div>
               </div>
-            </div>
-            <div class="swiper-slide">
-              <div class="image-slider__image">
-                <img src="./image/bacground.webp" alt="Kartinka" />
+            
+              <div class="swiper-slide">
+                <div class="image-slider__image">
+                  <img src="./image/bacground.webp" alt="Пример результата" />
+                </div>
               </div>
             </div>
           </div>
-
-          <div class="swiper-button-prev"></div>
-          <div class="swiper-button-next"></div>
-          <div class="swiper-pagination"></div>
+          
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-pagination"></div>
+          </div>
         </div>
       </div>
+      <section class="cta">
+        <div class="container">
+          <div class="cta__card">
+            <div>
+              <h2 class="cta__title">Готовы начать трансформацию?</h2>
+              <p class="cta__text">
+                Напишите мне, и мы подберём формат тренировок, который будет
+                комфортным именно для вас.
+              </p>
+            </div>
+            <button class="bet-button" id="open-form-btn-secondary">
+              Записаться
+            </button>
+          </div>
+        </div>
+      </section>
     </main>
     <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
     <script src="./script.js"></script>
@@ -184,9 +344,3 @@
           </a>
           <a href="https://wa.me/79110235371" class="social-link">
             <i class="fab fa-whatsapp"></i>
-          </a>
-        </div>
-      </div>
-    </footer>
-  </body>
-</html>

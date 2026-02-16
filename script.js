@@ -1,47 +1,65 @@
-// Подключение EmailJS
+ // Подключение EmailJS
 document.addEventListener("DOMContentLoaded", function () {
   emailjs.init("m8SqrVEe6YFiwOTr2"); // Замените на ваш ID из EmailJS
 
-  // Открытие формы
-  document
-    .getElementById("open-form-btn")
-    .addEventListener("click", function () {
-      document.querySelector(".modal").style.display = "flex";
-    });
+  const modal = document.getElementById("signup-modal");
+  const closeButton = modal.querySelector(".close-btn");
+  const form = document.getElementById("contact-form");
 
-  // Закрытие формы
-  document.querySelector(".close-btn").addEventListener("click", function () {
-    document.querySelector(".modal").style.display = "none";
+  const openButtons = document.querySelectorAll(
+    "#open-form-btn, #open-form-btn-secondary"
+  );
+
+  const openModal = () => {
+    modal.classList.remove("modal--hidden");
+  };
+
+  const closeModal = () => {
+    modal.classList.add("modal--hidden");
+  };
+
+  openButtons.forEach((button) => {
+    if (button) {
+      button.addEventListener("click", openModal);
+    }
   });
 
-  // Отправка формы
-  document
-    .getElementById("contact-form")
-    .addEventListener("submit", function (e) {
-      e.preventDefault();
+  closeButton.addEventListener("click", closeModal);
 
-      const form = document.getElementById("contact-form");
+  modal.addEventListener("click", (event) => {
+    if (event.target === modal) {
+      closeModal();
+    }
+  });
 
-      emailjs.sendForm("service_2z29a9e", "template_0e63dyp", form).then(
-        function () {
-          alert("Сообщение отправлено!");
-          document.querySelector(".modal").style.display = "none";
-          form.reset();
-        },
-        function (error) {
-          alert("Ошибка при отправке: " + error.text);
-        }
-      );
-    });
-});
+      
+  document.addEventListener("keydown", (event) => {
+    if (event.key === "Escape") {
+      closeModal();
+    }
+  });
 
-document.addEventListener("DOMContentLoaded", () => {
+  form.addEventListener("submit", function (event) {
+    event.preventDefault();
+
+    emailjs.sendForm("service_2z29a9e", "template_0e63dyp", form).then(
+      function () {
+        alert("Сообщение отправлено!");
+        closeModal();
+        form.reset();
+      },
+      function (error) {
+        alert("Ошибка при отправке: " + error.text);
+      }
+    );
+  });
+
   const swiper = new Swiper(".swiper-container", {
     // Основные параметры слайдера
     slidesPerView: 1,
     spaceBetween: 30,
     loop: true,
-
+    
     // Навигация
     navigation: {
       nextEl: ".swiper-button-next",
